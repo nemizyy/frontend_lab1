@@ -6,28 +6,8 @@
     <meta name="keywords" content="Мельниченко Тарас, ІО-43, Київ, хобі">
     <meta name="description" content="Особиста сторінка Тараса Мельниченка, студента групи ІО-43.">
     <title>Мельниченко Т. О. — ІО-43</title>
-    <style>
-        body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 24px;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #202124;
-        }
-
-        h1,
-        h2 {
-            color: #174a73;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -52,9 +32,9 @@
 
         <section>
             <h2>Улюблені фільми</h2>
-            <ol>
-                <li>«Бійцівський клуб» (Fight Club, 1999)</li>
-                <li>«Вовк з Волл-стріт» (The Wolf of Wall Street, 2013)</li>
+            <ol id="favorite-movies">
+                <li id="variant-first" title="Клацніть, щоб змінити кольори">«Бійцівський клуб» (Fight Club, 1999)</li>
+                <li id="variant-second" title="Клацніть, щоб змінити кольори">«Вовк з Волл-стріт» (The Wolf of Wall Street, 2013)</li>
                 <li>«Матриця» (The Matrix, 1999)</li>
             </ol>
         </section>
@@ -62,10 +42,17 @@
         <section>
             <h2>Моє улюблене місто — Київ</h2>
             <p>Київ — це велична столиця України, місто з тисячолітньою історією, яке поєднує в собі давню велич пам'яток Київської Русі та сучасний динамічний ритм мегаполіса. Найбільше мене вражають мальовничі схили Дніпра, золоті куполи старовинних храмів, затишні каштанові алеї та величний пам'ятник Засновницям Києва. Особливу атмосферу створює прогулянка історичним центром, Андріївським узвозом із його художніми лавками, а також вечірній вид на підсвічений міст Патона та Печерську Лавру.</p>
-            <a href="https://kyivcity.gov.ua/" aria-label="Перейти на сайт Київської міської державної адміністрації">
+            <a id="image-link" href="https://kyivcity.gov.ua/" aria-label="Перейти на сайт Київської міської державної адміністрації">
                 <img src="https://spcdn.shortpixel.ai/spio/ret_img+q_cdnize+to_auto+s_webp:avif/portalhistoryua.com/wp-content/uploads/2024/05/majdan-nezalezhnosti-v-kyyevi-glib-albovskyj-unsplash.jpg"
                      alt="Майдан Незалежності в Києві">
             </a>
+            <div class="image-controls" role="group" aria-label="Керування зображенням">
+                <button type="button" id="add-image">Додати зображення</button>
+                <button type="button" id="enlarge-image">Збільшити</button>
+                <button type="button" id="shrink-image">Зменшити</button>
+                <button type="button" id="remove-image">Видалити зображення</button>
+            </div>
+            <p id="image-status" class="visually-hidden" aria-live="polite"></p>
         </section>
     </main>
 </body>
