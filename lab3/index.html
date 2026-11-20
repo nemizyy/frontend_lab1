@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Варіант 9 - верстка на float та Flexbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width">
+      <h1>Макет сайту - варіант 9</h1>
+      <nav aria-label="Спосіб верстки">
+        <a class="active" href="#float" aria-current="page">Float</a>
+        <a href="#flex">Flexbox</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-width">
+    <h2 id="float">Блочна верстка з використанням float</h2>
+    <div class="canvas">
+      <section class="layout float-layout" aria-label="Макет сторінки, створений за допомогою float">
+        <div class="layout-row float-header-row">
+          <div class="layout-spacer" aria-hidden="true"></div>
+          <div class="tile tile-header">TEXT</div>
+        </div>
+        <div class="layout-row float-content-row">
+          <div class="tile tile-left">IMG</div>
+          <div class="tile tile-center">IMG</div>
+          <div class="tile tile-right">TEXT</div>
+        </div>
+        <div class="layout-row float-footer-row">
+          <div class="tile tile-footer">TEXT</div>
+          <div class="layout-spacer" aria-hidden="true"></div>
+        </div>
+      </section>
+    </div>
+    <h2 id="flex">Блочна верстка з використанням Flexbox</h2>
+    <div class="canvas">
+      <section class="layout flex-layout" aria-label="Макет сторінки, створений за допомогою Flexbox">
+        <div class="layout-row flex-header-row">
+          <div class="layout-spacer" aria-hidden="true"></div>
+          <div class="tile tile-header">TEXT</div>
+        </div>
+        <div class="layout-row flex-content-row">
+          <div class="tile tile-left">IMG</div>
+          <div class="tile tile-center">IMG</div>
+          <div class="tile tile-right">TEXT</div>
+        </div>
+        <div class="layout-row flex-footer-row">
+          <div class="tile tile-footer">TEXT</div>
+          <div class="layout-spacer" aria-hidden="true"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #20242a;
+  background: #f3f5f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  width: min(920px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.card {
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgb(23 35 48 / 12%);
+}
+
+.lab-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.lab-layout .card {
+  margin-bottom: 24px;
+}
+
+.result-card {
+  position: sticky;
+  top: 24px;
+  min-height: 180px;
+}
+
+.result-row {
+  margin: 10px 0;
+  line-height: 1.45;
+}
+
+.empty-result {
+  color: #737b86;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 8px 16px;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-left: 4px solid transparent;
+}
+
+.form-row.invalid {
+  border-left-color: #dc2626;
+  background: #fff1f2;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.format {
+  color: #59616a;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+label {
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.error {
+  grid-column: 2;
+  min-height: 18px;
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
+button {
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: #263445;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #43566c;
+}
+
+.table-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#color-picker {
+  width: 56px;
+  min-height: 36px;
+  padding: 3px;
+}
+
+#number-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  user-select: none;
+}
+
+#number-table td {
+  height: 64px;
+  border: 1px solid #7c8795;
+  text-align: center;
+  background: #fff;
+  cursor: default;
+  transition: background-color 0.15s ease;
+}
+
+#number-table td.variant-cell {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hint {
+  color: #59616a;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .lab-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    position: static;
+  }
+
+  .page {
+    width: min(100% - 20px, 920px);
+    margin: 16px auto;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .error {
+    grid-column: 1;
+  }
+
+  #number-table td {
+    height: 48px;
+  }
+}
